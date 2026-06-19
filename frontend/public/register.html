@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InternConnect - Register</title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <div id="navbarRoot"></div>
+    <main class="page">
+      <section class="card form-wrap">
+        <h2>Register</h2>
+        <form id="registerForm" class="form-grid">
+          <input id="name" type="text" placeholder="Name" required />
+          <input id="email" type="email" placeholder="Email" required />
+          <input id="password" type="password" placeholder="Password" required />
+          <select id="role" required>
+            <option value="student">Student</option>
+            <option value="recruiter">Recruiter</option>
+            <option value="admin">Admin</option>
+          </select>
+          <button type="submit">Register</button>
+        </form>
+        <p id="registerMsg" class="status-note"></p>
+      </section>
+    </main>
+    <div id="chatbotRoot"></div>
+    <script src="/common.js"></script>
+    <script src="/register.js"></script>
+  </body>
+</html>

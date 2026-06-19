@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InternConnect - Home</title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <div id="navbarRoot"></div>
+
+    <main class="page">
+      <section class="hero">
+        <h1 class="hero-title">InternConnect</h1>
+        <p class="hero-subline">
+          Stop chasing emails and start tracking progress — InternConnect puts your entire internship
+          journey in one place, in real time.
+        </p>
+      </section>
+
+      <p id="authHint" class="status-note"></p>
+
+      <section id="recruiterPanel" class="card role-panel hidden">
+        <h3>Recruiter - Post Internship</h3>
+        <form id="internshipForm" class="panel-grid">
+          <input id="title" placeholder="Title" required />
+          <input id="company" placeholder="Company" required />
+          <select id="domain" required>
+            <option value="">Select Domain</option>
+            <option value="Frontend">Frontend</option>
+            <option value="Backend">Backend</option>
+            <option value="AI">AI</option>
+            <option value="Data Science">Data Science</option>
+            <option value="DevOps">DevOps</option>
+            <option value="Mobile">Mobile</option>
+            <option value="Cybersecurity">Cybersecurity</option>
+            <option value="Cloud">Cloud</option>
+          </select>
+          <input id="location" placeholder="Location" required />
+          <input id="stipend" placeholder="Stipend" required />
+          <input id="duration" placeholder="Duration" required />
+          <input id="skills" placeholder="Skills (comma separated)" required />
+          <textarea id="description" placeholder="Description" rows="3" required></textarea>
+          <button type="submit">Create Internship</button>
+        </form>
+      </section>
+
+      <section id="adminPanel" class="card role-panel hidden">
+        <h3>Admin - Pending Internships</h3>
+        <div id="adminInternshipList" class="grid"></div>
+      </section>
+
+      <section class="toolbar">
+        <input id="searchCompany" placeholder="Search by company name" />
+        <input id="searchSkill" placeholder="Filter by skill" />
+        <input id="searchDuration" placeholder="Filter by duration" />
+        <button id="searchBtn" type="button">Search</button>
+      </section>
+
+      <p id="homeStatus" class="status-note"></p>
+      <section id="applyModal" class="apply-modal hidden">
+        <div class="apply-modal-card">
+          <h3>Apply for Internship</h3>
+          <form id="applyForm" class="form-grid">
+            <input id="studentName" name="name" placeholder="Student Name" required />
+            <input id="studentMobile" name="mobile" placeholder="Mobile Number" required />
+            <input id="studentEmail" type="email" name="email" placeholder="Email" required />
+            <input id="studentSkills" name="skills" placeholder="Skills (comma separated)" required />
+            <input id="studentResume" type="file" name="resume" accept=".pdf,.doc,.docx" />
+            <div class="apply-actions">
+              <button type="button" id="cancelApplyBtn" class="btn-delete">Cancel</button>
+              <button type="submit">Submit Application</button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section id="internshipGrid" class="grid"></section>
+    </main>
+
+    <div id="chatbotRoot"></div>
+    <script src="/common.js"></script>
+    <script src="/home.js"></script>
+  </body>
+</html>
